@@ -1,4 +1,5 @@
-const apiKey = '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';
+require('dotenv').config();
+const apiKey = process.env.API_KEY;
 
 document.addEventListener('DOMContentLoaded', () => {
     const summarizeBtn = document.getElementById('summarizeBtn');
