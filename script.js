@@ -1,4 +1,4 @@
-const apiKey = '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';
+const apiKey = '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';
 
 document.addEventListener('DOMContentLoaded', () => {
     const summarizeBtn = document.getElementById('summarizeBtn');
@@ -38,8 +38,7 @@ async function crashCourse() {
         body: JSON.stringify(data)
     })
 
-    const result = response.json();
-    console.log(result);
+    const result = await response.json();
     
     if (!response.ok) {
         throw new Error('Network response was not ok.');
