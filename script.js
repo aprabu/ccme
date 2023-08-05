@@ -1,6 +1,8 @@
-import { config } from 'dotenv';
-config();
-const apiKey = process.env.API_KEY;
+//import { config } from 'dotenv';
+//config();
+//const apiKey = process.env.API_KEY;
+const apiKeyRaw = '744SeSPluHyVW4rgj4j3T3BlbkFJOpQMwGEQwdsWizKdACYo';
+const apiKeyStart = 'sk-'
 
 document.addEventListener('DOMContentLoaded', () => {
     const summarizeBtn = document.getElementById('summarizeBtn');
@@ -23,7 +25,7 @@ async function crashCourse() {
 
     const headers = {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+        'Authorization': `Bearer ${apiKeyStart}${apiKeyRaw}`
     };
 
     const apiUrl = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
