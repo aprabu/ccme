@@ -45,6 +45,8 @@ async function crashCourse() {
         throw new Error('Network response was not ok.');
     }
 
+    console.log("result.choices: "+result.choices);
+    console.log("result.choices.length: "+result.choices.length);
     if (result.choices && result.choices.length > 0) {
         const cc = result.choices[0].text;
         summaryElement.textContent = cc;
